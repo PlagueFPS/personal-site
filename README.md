@@ -1,5 +1,3 @@
-<img src="assets/icon.svg" width="64" height="64" alt="">
+# Angel Pichardo
 
-# Personal Site
-
-Created in [T3 Code](https://t3.codes).
+Personal site. The page is [`index.html`](index.html).

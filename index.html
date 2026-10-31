@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angel Pichardo</title>
+  <meta name="description" content="Junior Product Engineer. I build applications and tools that I needed or think other people (mainly gamers) would find useful as well.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { color-scheme: light; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: #f3f4f6;
+      color: #1a1e24;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    :focus { outline: none; }
+
+    .ledger {
+      --ink: #1a1e24;
+      --muted: #3f4854;
+      --link: #18457a;
+      --line: rgba(26, 30, 36, 0.12);
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      min-height: 100vh;
+      background: #f3f4f6;
+      color: var(--ink);
+      font-family: "Familjen Grotesk", "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+    .ledger-wrap {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 72px 24px 64px;
+    }
+    .ledger-name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .ledger h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+    }
+    .ledger-social { display: flex; gap: 2px; flex: none; }
+    .ledger .ledger-social a {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      color: var(--ink);
+      text-decoration: none;
+      border-radius: 8px;
+      transform-origin: center;
+    }
+    .ledger-social svg { width: 18px; height: 18px; display: block; }
+    .ledger .role {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+    .ledger .lede {
+      margin: 28px 0 0;
+      max-width: 36rem;
+      font-size: 1.125rem;
+      line-height: 1.45;
+    }
+    .ledger h2 {
+      margin: 48px 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .ledger-project {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .ledger-project:first-of-type { border-top: 1px solid var(--line); margin-top: 12px; }
+    .ledger-project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+    .ledger-project-head a { display: inline-block; }
+    .ledger a {
+      color: var(--link);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.16em;
+      transform-origin: left center;
+      transition: transform 160ms var(--ease-out), color 150ms ease;
+    }
+    .ledger a:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .ledger .status {
+      color: var(--muted);
+      font-size: 0.95rem;
+      flex: none;
+    }
+    .ledger-project p { margin: 6px 0 0; }
+    .ledger-project .stack {
+      margin-top: 4px;
+      color: var(--muted);
+    }
+    .ledger a:active { transform: scale(0.98); }
+    @media (hover: hover) and (pointer: fine) {
+      .ledger a:hover { color: #0f3158; }
+      .ledger-social a:hover { color: var(--link); background: rgba(26, 30, 36, 0.05); }
+    }
+    .ledger-project {
+      animation: rise 280ms var(--ease-out) both;
+    }
+    .ledger-project:nth-of-type(1) { animation-delay: 0ms; }
+    .ledger-project:nth-of-type(2) { animation-delay: 40ms; }
+    .ledger-project:nth-of-type(3) { animation-delay: 80ms; }
+    .ledger-project:nth-of-type(4) { animation-delay: 120ms; }
+    .ledger-project:nth-of-type(5) { animation-delay: 160ms; }
+    .ledger-project:nth-of-type(6) { animation-delay: 200ms; }
+    .ledger-project:nth-of-type(7) { animation-delay: 240ms; }
+    .ledger-project:nth-of-type(8) { animation-delay: 280ms; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+    @media (max-width: 640px) {
+      .ledger h1 { font-size: 2.15rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ledger-project { animation: none; }
+      .ledger a { transition: none; }
+      .ledger a:active { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="ledger">
+    <div class="ledger-wrap">
+      <header class="ledger-name">
+        <h1>Angel Pichardo</h1>
+        <nav class="ledger-social" aria-label="Contact">
+          <a href="https://github.com/PlagueFPS" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="https://x.com/Plague_FPS" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></a>
+        </nav>
+      </header>
+      <p class="role">Junior Product Engineer</p>
+      <p class="lede">I build applications and tools that I needed or think other people (mainly gamers) would find useful as well.</p>
+
+      <h2>Projects</h2>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a class="ledger-title" href="https://codzombiesguides.com">COD Zombies Guides</a>
+          <span class="status">Live</span>
+        </div>
+        <p>Quest guides, a bestiary, cursed relics, and interactive maps for Call of Duty: Zombies.</p>
+        <p class="stack">TypeScript, TanStack Start, Effect, React, Cloudflare, MDX.</p>
+        <p><a href="https://github.com/PlagueFPS/cod-zombies">github.com/PlagueFPS/cod-zombies</a></p>
+      </section>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://github.com/PlagueFPS/arc-tools">ARC Tools</a>
+          <span class="status">Current</span>
+        </div>
+        <p>Twitch and Discord commands for ARC Raiders loot, crafting, traders, and events.</p>
+        <p class="stack">TypeScript, Effect, Bun, Cloudflare Workers.</p>
+      </section>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://starsiege-dz.vercel.app">Starsiege: Deadzone</a>
+          <span class="status">Archived</span>
+        </div>
+        <p>A rewrite of the Starsiege: Deadzone community site.</p>
+        <p class="stack">TypeScript. <a href="https://github.com/PlagueFPS/starsiege-mvp">Source</a>.</p>
+      </section>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://tcfitemtracker.vercel.app">TCF Item Tracker</a>
+          <span class="status">Archived</span>
+        </div>
+        <p>A checklist for items you still need in The Cycle: Frontier.</p>
+        <p class="stack">TypeScript. <a href="https://github.com/PlagueFPS/TCF-Item-Tracker">Source</a>.</p>
+      </section>
+
+      <h2>Open source contributions</h2>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://github.com/vercel/next.js/pulls?q=is%3Apr+author%3APlagueFPS+is%3Amerged">Next.js</a>
+          <span class="status">Docs</span>
+        </div>
+        <p>Documentation for use cache, Draft Mode, and unstable_noStore.</p>
+      </section>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://github.com/zed-industries/zed/pulls?q=is%3Apr+author%3APlagueFPS+is%3Amerged">Zed</a>
+          <span class="status">Editor</span>
+        </div>
+        <p>Auto-update status in the title bar, and HTML alignment in the markdown preview.</p>
+      </section>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://github.com/payloadcms/payload/pull/10138">Payload</a>
+          <span class="status">Docs</span>
+        </div>
+        <p>A warning when defaultPopulate is used on a collection with uploads.</p>
+      </section>
+      <section class="ledger-project">
+        <div class="ledger-project-head">
+          <a href="https://github.com/resend/resend-node/pull/1112">Resend</a>
+          <span class="status">Docs</span>
+        </div>
+        <p>Broadcast JSDoc links that pointed at pages which 404'd.</p>
+      </section>
+    </div>
+  </article>
+</body>
+</html>
