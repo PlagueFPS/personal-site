@@ -1,3 +1,3 @@
 # Angel Pichardo
 
-Personal site. The page is [`index.html`](index.html).
+Personal site. The page is [`public/index.html`](public/index.html).
