@@ -18,4 +18,6 @@ bun run build
 bun run preview
 ```
 
-The build writes the static site to `dist/`. Cloudflare is configured to serve that directory; run the build before deploying.
+The build writes the static site to `dist/` and packages Cloudflare Build Output in `.cloudflare/output/v0/`. Worker settings live in `cloudflare.config.ts`; `wrangler.config.ts` supplies the static asset directory.
+
+Deploy production with `bun run build && bun run deploy`. For a branch preview, use `bun run build:preview && bun run deploy:preview`. Cloudflare Builds uses these preview commands for this branch.
