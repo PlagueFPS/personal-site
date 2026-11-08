@@ -137,6 +137,8 @@
       align-items: baseline;
     }
     .ledger-project-head a { display: inline-block; }
+    .contribution-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; min-width: 0; }
+    .contribution-prs { font-size: 0.85rem; color: var(--muted); }
     .ledger a {
       color: var(--link);
       text-decoration-thickness: 1px;
@@ -247,28 +249,40 @@
       <h2>Open source contributions</h2>
       <section class="ledger-project">
         <div class="ledger-project-head">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pulls?q=is%3Apr+author%3APlagueFPS+is%3Amerged">Next.js</a>
+          <div class="contribution-links">
+            <a target="_blank" rel="noopener noreferrer" href="https://nextjs.org">Next.js</a>
+            <span class="contribution-prs"><a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pull/75848" aria-label="Next.js pull request 75848">#75848</a>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pull/72368" aria-label="Next.js pull request 72368">#72368</a>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pull/71484" aria-label="Next.js pull request 71484">#71484</a>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pull/70128" aria-label="Next.js pull request 70128">#70128</a>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pull/70071" aria-label="Next.js pull request 70071">#70071</a>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/vercel/next.js/pull/70024" aria-label="Next.js pull request 70024">#70024</a></span>
+          </div>
           <span class="status">Docs</span>
         </div>
         <p>Documentation for use cache, Draft Mode, and unstable_noStore.</p>
       </section>
       <section class="ledger-project">
         <div class="ledger-project-head">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/zed-industries/zed/pulls?q=is%3Apr+author%3APlagueFPS+is%3Amerged">Zed</a>
+          <div class="contribution-links">
+            <a target="_blank" rel="noopener noreferrer" href="https://zed.dev">Zed</a>
+            <span class="contribution-prs"><a target="_blank" rel="noopener noreferrer" href="https://github.com/zed-industries/zed/pull/53552" aria-label="Zed pull request 53552">#53552</a>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/zed-industries/zed/pull/53196" aria-label="Zed pull request 53196">#53196</a></span>
+          </div>
           <span class="status">Editor</span>
         </div>
         <p>Auto-update status in the title bar, and HTML alignment in the markdown preview.</p>
       </section>
       <section class="ledger-project">
         <div class="ledger-project-head">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/payloadcms/payload/pull/10138">Payload</a>
+          <div class="contribution-links">
+            <a target="_blank" rel="noopener noreferrer" href="https://payloadcms.com">Payload</a>
+            <span class="contribution-prs"><a target="_blank" rel="noopener noreferrer" href="https://github.com/payloadcms/payload/pull/10138" aria-label="Payload pull request 10138">#10138</a></span>
+          </div>
           <span class="status">Docs</span>
         </div>
         <p>A warning when defaultPopulate is used on a collection with uploads.</p>
       </section>
       <section class="ledger-project">
         <div class="ledger-project-head">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/resend/resend-node/pull/1112">Resend</a>
+          <div class="contribution-links">
+            <a target="_blank" rel="noopener noreferrer" href="https://resend.com">Resend</a>
+            <span class="contribution-prs"><a target="_blank" rel="noopener noreferrer" href="https://github.com/resend/resend-node/pull/1112" aria-label="Resend pull request 1112">#1112</a></span>
+          </div>
           <span class="status">Docs</span>
         </div>
         <p>Broadcast JSDoc links that pointed at pages which 404'd.</p>
