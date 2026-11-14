@@ -6,6 +6,7 @@
     "cf": "^1.0.0-beta.26",
     "wrangler": "^4.156.0"
   },
+  "packageManager": "bun@1.4.4",
   "type": "module",
   "private": true,
   "scripts": {
